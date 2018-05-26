@@ -1,11 +1,14 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="./typography.html">
-<link rel="import" href="./color.html">
-<link rel="import" href="./button.html">
-<link rel="import" href="./input.html">
-<link rel="import" href="./background.html">
-<link rel="import" href="./layout.html">
-<custom-style>
+import '@polymer/polymer/polymer-legacy.js';
+import './typography.js';
+import './color.js';
+import './button.js';
+import './input.js';
+import './background.js';
+import './layout.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = `<custom-style>
     <style is="custom-style">
         html {
             --kano-shadow: {
@@ -41,4 +44,6 @@
             --iron-overlay-backdrop-background-color: #5c6870;
         }
     </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);

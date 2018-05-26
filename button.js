@@ -1,6 +1,8 @@
-<link rel="import" href="../polymer/polymer.html">
+import '@polymer/polymer/polymer-legacy.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
 
-<custom-style>
+$_documentContainer.innerHTML = `<custom-style>
     <style is="custom-style">
         html {
             --kano-button: {
@@ -42,4 +44,6 @@
             };
         }
     </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);

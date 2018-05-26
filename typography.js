@@ -1,6 +1,8 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="stylesheet" href="./fonts/bariol.css">
-<custom-style>
+import '@polymer/polymer/polymer-legacy.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = `<custom-style>
     <style is="custom-style">
         html {
             --font-heading: 'Bariol', Helvetica, Arial, sans-serif;
@@ -11,4 +13,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
     </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);

@@ -1,7 +1,9 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="./typography.html">
+import '@polymer/polymer/polymer-legacy.js';
+import './typography.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
 
-<custom-style>
+$_documentContainer.innerHTML = `<custom-style>
   <style is="custom-style">
       html {
           --kano-input: {
@@ -38,8 +40,7 @@
           };
       }
   </style>
-</custom-style>
-<dom-module id="input-range">
+</custom-style><dom-module id="input-range">
     <template>
         <style>
             input[type=range] {
@@ -135,9 +136,7 @@
             }
         </style>
     </template>
-</dom-module>
-
-<dom-module id="input-text">
+</dom-module><dom-module id="input-text">
     <template>
         <style>
             input[type="text"],
@@ -186,9 +185,7 @@
             }
         </style>
     </template>
-</dom-module>
-
-<dom-module id="input-checkbox">
+</dom-module><dom-module id="input-checkbox">
     <template>
         <style>
             input[type="checkbox"] {
@@ -231,4 +228,6 @@
             }
         </style>
     </template>
-</dom-module>
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
