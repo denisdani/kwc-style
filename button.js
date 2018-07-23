@@ -1,42 +1,45 @@
-import { html } from './template.js';
+import { button } from './button/base.js';
+import { black } from './button/black.js';
+import { disabled } from './button/disabled.js';
+import { ghost } from './button/ghost.js';
+import { outline } from './button/outline.js';
+import { primary } from './button/primary.js';
+import { secondary } from './button/secondary.js';
+import { tertiary } from './button/tertiary.js';
+import { transparent } from './button/transparent.js';
+import { warning } from './button/warning.js';
+import { white } from './button/white.js';
+import { soft } from './button/soft.js';
+import { mega } from './button/mega.js';
 
-export const button = html`
-<style>
-    .btn {
-        border: none;
-        border-radius: 40px;
-        color: var(--kwc-button-color, white);
-        cursor: pointer;
-        display: inline-block;
-        font-family: var(--kwc-button-font, var(--font-body));
-        font-weight: bold;
-        min-width: 100px;
-        outline: none;
-        overflow: hidden;
-        padding: 0 22px;
-        text-align: center;
-        text-transform: uppercase;
-        transition-property: background-color, border-color, color;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-        white-space: nowrap;
+export {
+    button,
+    black,
+    disabled,
+    ghost,
+    outline,
+    primary,
+    secondary,
+    tertiary,
+    transparent,
+    warning,
+    white,
+    soft,
+    mega,
+};
 
-        color: white;
-        background: var(--color-kano-orange);
-
-        font-size: 14px;
-        height: 40px;
-        line-height: 40px;
-    }
-    .btn:hover,
-    .btn:focus {
-        color: white;
-        background-color: var(--color-flame);
-    }
-    .btn.small {
-        font-size: 12px;
-        height: 32px;
-        line-height: 32px;
-    }
-</style>
-`;
+export default {
+    button,
+    black,
+    disabled,
+    ghost,
+    outline,
+    primary,
+    secondary,
+    tertiary,
+    transparent,
+    warning,
+    white,
+    soft,
+    mega,
+};
